@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.0)
 
 project(imgui)
 
+set(CMAKE_CXX_FLAGS "-fPIC -O3")
 
 find_package(SDL2 REQUIRED)
 find_package(OpenGL REQUIRED)
