@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0)
 
 project(imgui)
 
-set(CMAKE_CXX_FLAGS "-fPIC -O3")
+set(CMAKE_CXX_FLAGS "-O3")
 
 find_package(SDL2 REQUIRED)
 find_package(OpenGL REQUIRED)
@@ -70,7 +70,7 @@ set(SRC
     #src/backends/imgui_impl_glfw.cpp
 #)
 
-add_library(imgui ${SRC})
+add_library(imgui STATIC ${SRC})
 
 
 target_include_directories(imgui PRIVATE ${SDL2_INCLUDE_DIRS} ${OPENGL_INCLUDE_DIR})
